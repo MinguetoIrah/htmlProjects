@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM Fitness Memberships</title>
+    <link rel="icon" type="image/png" href="favicon.png">  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .membership-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .membership-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .membership-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .membership-header {
+            background-color: #ff4444;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .membership-header h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .membership-header p {
+            font-size: 1.2em;
+        }
+
+        .membership-content {
+            padding: 30px;
+        }
+
+        .membership-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .membership-features li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .membership-features li:before {
+            content: "✓";
+            color: #ff4444;
+            position: absolute;
+            left: 0;
+        }
+
+        .membership-price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff4444;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .membership-button {
+            display: block;
+            text-align: center;
+            padding: 15px 30px;
+            background-color: #ff4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .membership-button:hover {
+            background-color: #ff2222;
+        }
+        .home-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .home-link a {
+            display: inline-block;
+            color: #fff;
+            background-color: #87ceeb;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .home-link a:hover {
+            background-color: #5f9ea0;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="membership-section">
+        <div class="section-header">
+            <h2>Membership Options</h2>
+            <p>Choose the perfect membership plan to fit your fitness goals and lifestyle. Join our community of health-conscious individuals and start your transformation today.</p>
+        </div>
+
+        <div class="membership-grid">
+            <!-- Basic Membership -->
+            <div class="membership-card">
+                <div class="membership-header">
+                    <h3>Basic</h3>
+                    <p>P500/month</p>
+                </div>
+                <div class="membership-content">
+                    <ul class="membership-features">
+                        <li>Access to gym facilities</li>
+                        <li>Unlimited group classes</li>
+                        <li>Free fitness assessments</li>
+                        <li>Discounts on personal training</li>
+                    </ul>
+                    <div class="membership-price">P500</div>
+                    <a href="#join" class="membership-button">Join Now</a>
+                </div>
+            </div>
+
+            <!-- Premium Membership -->
+            <div class="membership-card">
+                <div class="membership-header">
+                    <h3>Premium</h3>
+                    <p>P1000/month</p>
+                </div>
+                <div class="membership-content">
+                    <ul class="membership-features">
+                        <li>Unlimited access to gym facilities</li>
+                        <li>Unlimited group classes</li>
+                        <li>Free fitness assessments</li>
+                        <li>Complimentary personal training sessions</li>
+                        <li>Nutrition coaching</li>
+                        <li>Exclusive members-only events</li>
+                    </ul>
+                    <div class="membership-price">P1000</div>
+                    <a href="#join" class="membership-button">Join Now</a>
+                </div>
+            </div>
+
+            <!-- Elite Membership -->
+            <div class="membership-card">
+                <div class="membership-header">
+                    <h3>Elite</h3>
+                    <p>1500/month</p>
+                </div>
+                <div class="membership-content">
+                    <ul class="membership-features">
+                        <li>Unlimited access to gym facilities</li>
+                        <li>Unlimited group classes</li>
+                        <li>Free fitness assessments</li>
+                        <li>Complimentary personal training sessions</li>
+                        <li>Nutrition coaching</li>
+                        <li>Exclusive members-only events</li>
+                        <li>Priority booking for classes</li>
+                        <li>Access to private lounge</li>
+                    </ul>
+                    <div class="membership-price">P1500</div>
+                    <a href="#join" class="membership-button">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="home-link">
+        <a href="index.html">Home Screen</a>
+    </div>
+</body>
+</html>

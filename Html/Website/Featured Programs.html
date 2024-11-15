@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM Fitness Features</title>
+    <link rel="icon" type="image/png" href="favicon.png">  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .program-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .program-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,68,68,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .program-card:hover .program-overlay {
+            opacity: 1;
+        }
+
+        .program-content {
+            padding: 25px;
+        }
+
+        .program-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .program-details {
+            margin-bottom: 20px;
+        }
+
+        .program-schedule {
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .program-intensity {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .intensity-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+
+        .intensity-dot.active {
+            background-color: #ff4444;
+        }
+
+        .program-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .program-button:hover {
+            background-color: #ff2222;
+        }
+        .home-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .home-link a {
+            display: inline-block;
+            color: #fff;
+            background-color: #87ceeb;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .home-link a:hover {
+            background-color: #5f9ea0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Happy Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Expert Trainers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Weekly Classes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <div class="section-title">
+            <h2>Featured Programs</h2>
+            <p>Discover our specially designed fitness programs to help you achieve your health and wellness goals</p>
+        </div>
+
+        <div class="programs-grid">
+            <!-- Strength Training -->
+            <div class="program-card">
+                <div class="program-image">
+                    <img src="Image/Img5.jpg" alt="Strength Training">
+                    <div class="program-overlay">
+                        <a href="#book" class="program-button">Join Now</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">Strength Training</h3>
+                    <div class="program-details">
+                        <p class="program-schedule">Mon, Wed, Fri | 6:00 AM - 7:00 AM</p>
+                        <div class="program-intensity">
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot"></span>
+                            <span class="intensity-dot"></span>
+                        </div>
+                    </div>
+                    <p>Build muscle, increase strength, and improve your overall fitness with our comprehensive strength training program.</p>
+                </div>
+            </div>
+
+            <!-- Cardio Blast -->
+            <div class="program-card">
+                <div class="program-image">
+                    <img src="Image/Img6.jpg" alt="Cardio Blast">
+                    <div class="program-overlay">
+                        <a href="#book" class="program-button">Join Now</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">Cardio Blast</h3>
+                    <div class="program-details">
+                        <p class="program-schedule">Tue, Thu | 5:30 PM - 6:30 PM</p>
+                        <div class="program-intensity">
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot"></span>
+                        </div>
+                    </div>
+                    <p>High-energy cardio workouts designed to burn fat, improve endurance, and boost your metabolism.</p>
+                </div>
+            </div>
+
+            <!-- Yoga Flow -->
+            <div class="program-card">
+                <div class="program-image">
+                    <img src="Image/Img7.jpg" alt="Yoga Flow">
+                    <div class="program-overlay">
+                        <a href="#book" class="program-button">Join Now</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">Yoga Flow</h3>
+                    <div class="program-details">
+                        <p class="program-schedule">Daily | 7:00 AM - 8:00 AM</p>
+                        <div class="program-intensity">
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot"></span>
+                            <span class="intensity-dot"></span>
+                            <span class="intensity-dot"></span>
+                        </div>
+                    </div>
+                    <p>Find balance, improve flexibility, and reduce stress with our mindful yoga flow sessions.</p>
+                </div>
+            </div>
+
+            <!-- HIIT Challenge -->
+            <div class="program-card">
+                <div class="program-image">
+                    <img src="Image/Img8.png" alt="HIIT Challenge">
+                    <div class="program-overlay">
+                        <a href="#book" class="program-button">Join Now</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">HIIT Challenge</h3>
+                    <div class="program-details">
+                        <p class="program-schedule">Mon, Wed, Fri | 6:30 PM - 7:30 PM</p>
+                        <div class="program-intensity">
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                            <span class="intensity-dot active"></span>
+                        </div>
+                    </div>
+                    <p>Maximum results in minimum time with our high-intensity interval training program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="home-link">
+        <a href="index.html">Home Screen</a>
+    </div>
+</body>
+</html>
