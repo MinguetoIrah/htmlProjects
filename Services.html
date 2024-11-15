@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM Fitness Services</title>
+    <link rel="icon" type="image/png" href="favicon.png">  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .services-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-image {
+            height: 200px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-title {
+            color: #ff4444;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .service-features li {
+            margin-bottom: 8px;
+            color: #444;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: #ff4444;
+            position: absolute;
+            left: 0;
+        }
+
+        .service-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .service-button:hover {
+            background-color: #ff2222;
+        }
+        .home-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .home-link a {
+            display: inline-block;
+            color: #fff;
+            background-color: #87ceeb;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .home-link a:hover {
+            background-color: #5f9ea0;
+        }
+    </style>
+</head>
+<body>
+    <section class="services-section">
+        <div class="section-header">
+            <h2>Our Fitness Services</h2>
+            <p>Transform your body and mind with our comprehensive range of fitness services. Whether you're just starting your fitness journey or looking to take your training to the next level, we have the perfect program for you.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Personal Training -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="Image/Img1.png" alt="Personal Training">
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Personal Training</h3>
+                    <p class="service-description">Get personalized attention and achieve your fitness goals faster with our expert trainers.</p>
+                    <ul class="service-features">
+                        <li>Customized workout plans</li>
+                        <li>Nutrition guidance</li>
+                        <li>Progress tracking</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                    <a href="#book-now" class="service-button">Book a Session</a>
+                </div>
+            </div>
+
+            <!-- Group Classes -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="Image/Img2.png" alt="Group Classes">
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Group Classes</h3>
+                    <p class="service-description">Join our energetic group sessions and get motivated by working out with others.</p>
+                    <ul class="service-features">
+                        <li>HIIT workouts</li>
+                        <li>Yoga sessions</li>
+                        <li>Spin classes</li>
+                        <li>Strength training</li>
+                    </ul>
+                    <a href="#schedule" class="service-button">View Schedule</a>
+                </div>
+            </div>
+
+            <!-- Nutrition Coaching -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="Image/Img3.jpg" alt="Nutrition Coaching">
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Nutrition Coaching</h3>
+                    <p class="service-description">Get expert nutrition advice to complement your fitness routine and maximize results.</p>
+                    <ul class="service-features">
+                        <li>Meal planning</li>
+                        <li>Dietary analysis</li>
+                        <li>Supplement guidance</li>
+                        <li>Regular check-ins</li>
+                    </ul>
+                    <a href="#nutrition" class="service-button">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Specialized Programs -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="Image/Img4.jpg" alt="Specialized Programs">
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Specialized Programs</h3>
+                    <p class="service-description">Target specific fitness goals with our specialized training programs.</p>
+                    <ul class="service-features">
+                        <li>Weight loss programs</li>
+                        <li>Muscle building</li>
+                        <li>Sports conditioning</li>
+                        <li>Senior fitness</li>
+                    </ul>
+                    <a href="#programs" class="service-button">Explore Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="home-link">
+        <a href="index.html">Home Screen</a>
+    </div>
+</body>
+</html>
